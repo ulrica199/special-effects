@@ -1,0 +1,29 @@
+/*
+* @Author: 11740
+* @Date:   2018-06-20 21:05:54
+* @Last Modified by:   11740
+* @Last Modified time: 2018-06-20 21:35:19
+*/
+span {
+  display: block;
+  /* 中心圆形大小 */
+  width: 100px;
+  height: 100px;
+  margin: 160px auto;
+  animation: ripple 0.6s linear infinite;
+  /* 50 为圆形 */
+  border-radius: 50px;
+  /* 中心圆颜色 */
+ background-color: #F5FFFA;
+}
+
+/* dalgalanma efekti */
+@keyframes ripple {
+  0% {
+  	/* rgba为圆圈颜色深浅 */
+    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.1), 0 0 0 20px rgba(0, 128, 0, 0.4), 0 0 0 40px rgba(0, 128, 0, 0.8), 0 0 0 60px rgba(0, 128, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 128, 0, 0.1), 0 0 0 40px rgba(0, 128, 0, 0.1), 0 0 0 60px rgba(0, 128, 0, 0.1), 0 0 0 80px rgba(0, 128, 0, 0);
+  }
+}

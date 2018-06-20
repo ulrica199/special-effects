@@ -1,0 +1,389 @@
+*
+* @Author: 11740
+* @Date:   2017-12-11 20:24:07
+* @Last Modified by:   11740
+* @Last Modified time: 2017-12-13 20:52:47
+*@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {				
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+
+	/* <!-- site-nav部分start --> */
+	.site-nav {
+		/* margin-top: -10px; */
+		height: 30px;
+		line-height: 30px; 
+		background-color: #F1F1F1;
+	}
+	.site-nav-send ,.site-nav-r .fore {    /* 很关键，父盒子的相对浮动决定了子盒子的绝对浮动能否出现效果 */
+		padding: 0 25px 0 10px;
+        position: relative;
+	}
+	.site-nav-send:hover {
+        background-color: #fff;
+    }
+   
+	.site-nav-send i ,  .fore i {
+		position: absolute;
+		width: 15px; 
+        height: 7px;
+        top: 12px;
+        right: 8px;
+        overflow: hidden;
+       /* background-color: red; */
+	}
+	.site-nav-send s , .fore s {
+		font: 400 13px/15px "comsolas"; 
+        position: absolute;  
+        top: -7px;   
+	}
+	.site-nav-r li {
+		margin-top: -12px;  
+        padding: 0 10px;
+        float: left;
+        
+        /* background-color: red; */
+    }
+    .site-nav-r .line {
+        width: 1px;
+        height: 12px;
+        background-color: #DDD;
+        margin-top: -5px;
+        padding: 0;
+    }
+    .str-nav-r .jd-tel {
+        padding-left: 25px;
+    }
+    .jd-tel span{
+        position: absolute;
+        top: 5px;
+        width: 15px;
+        height: 20px;
+        left: -5px;
+        background: url("../images/tel.png") no-repeat;
+    }
+	/* <!-- site-nav部分end --> */
+
+
+	/* <!--topbanner部分start --> */
+	.topbanner{
+        background-color: #37C2FB;
+    }
+   
+    .close-banner {
+        position: absolute;
+        top: 55px;
+        right: 25px;
+        width: 19px;
+        height: 19px;
+        background: url("../images/close-banner.png");
+    }
+     .tb {
+        position: relative;
+    }
+    .close-banner:hover{
+        background-position: bottom;
+    }
+
+    /* <!--topbanner部分end --> */
+
+
+    /* <!--search部分start --> */
+    .search-logo {
+        width: 362px;
+        height: 60px;
+        float: left;
+        padding: 20px 0;
+    }
+    .search-logo a {
+        /* display: block; */
+       float: left;
+       width: 270px;
+       height: 60px;
+       padding: 20px 0;
+       text-indent: -999em;
+       background: url("../images/logo.png") no-repeat;
+       /* background-color: red; */
+     }
+    .search-input {
+        height: 36px;
+        /* background-color: red; */
+        float: left;
+        padding-top: 25px;
+    }
+    .search-input input {
+        float: left;    /* 如果没有浮动，与右侧的搜索对接不起来 */
+        width: 449px;
+        height: 32px;
+        border: 2px solid #B61D1D;
+        padding-left: 5px;
+        font: 400 14px/32px "microsoft yahei";
+        color: #cccccc;
+        border-right: 0;
+    }
+    .search-input button {
+        width: 82px;
+        height: 36px;
+        color: #fff;
+        font: 400 16px/36px "microsoft yahei" ;
+        background-color: #B61D1D;
+    }
+    .search-car {
+        width: 96px;
+        height: 34px;
+        line-height: 34px;
+        padding-left: 43px;
+        margin: 25px 65px 0 0;
+        float: right;
+        border: 1px solid #DFDFDF;
+        background-color: #F9F9F9;  
+        position: relative;       
+    }
+    .icon1 {
+        width: 18px;
+        height: 16px;
+        position: absolute;  /* 子绝父相 */
+        top: 9px;
+        left: 18px;
+        background: url("../images/tel.png") no-repeat 0 -58px; /* Y轴为负数 */
+    }
+    .icon2 {
+        position: absolute; 
+        top: 0;
+        right: 10px;
+        color: #999;
+        font-family: "SimSun";
+    }
+    .icon3 {
+        position: absolute;
+        width: 16px;
+        height: 14px;
+        background-color: #C81623;
+        line-height: 14px;
+        text-align: center;
+        color: #fff;
+        border-radius: 7px 7px 7px 0;
+    }
+    .search-moreAlink {
+        float: left;
+        width: 530px;
+        height: 28px;
+        line-height: 28px;
+    }
+    .search-moreAlink a {
+        margin-right: 8px;
+    }
+
+    /* <!--search部分end --> */
+
+    /* <!--footer部分start --> */
+
+    .footer-top-slogen {
+        height: 54px;
+        padding: 20px 0;
+        position: relative;
+        margin-bottom: 16px;
+        background-color: #F5F5F5;
+        /* background-color: red; 测试背景*/
+    }
+    /* .footer-top-slogen img {
+        border: 0;
+        vertical-align: middle;
+    } */
+     /* .footer-top-slogen  sapn {
+        margin-left: 10px;
+     } */
+    .footer-top-slogen-icon {
+        position: absolute;  /* 随窗口大小移动 */
+        left: 50%;
+        /* top: 20px; */
+    }
+    .footer-top-slogen-1 {
+        margin-left: -604px;
+    }
+    .footer-top-slogen-2 {
+        margin-left: -302px;
+    }
+    .footer-top-slogen-4 {
+        margin-left: 302px;
+    } 
+    .footer-top-shopping{
+
+    }
+    .footer-top-shopping dl {
+        float: left;
+        width: 180px;
+    }
+    /* .footer-top-shopping .last-dl{
+        width: 105px;   
+
+    } */
+    .footer-top-shopping dt {
+        padding-left: 40px;
+        height: 34px;
+        display: block;
+        font:400 16px/34px "microsoft yahei"; 
+    }
+    .footer-top-shopping dd {
+        line-height: 24px;
+    } 
+     .footer-top-shopping .last-dl {
+        width: 100px;
+     }
+    .coverage {
+        width: 186px;
+        height: 169px;
+        float: right;
+        margin-top: 20px;
+        margin-right: 60px;
+        padding-left: 17px; 
+        background: url("../images/china.png")  no-repeat left bottom;
+    }
+     .coverage h3 {
+        height: 34px;
+        font: 400 16px/34px "microsoft yahei";
+    }
+    .coverage p {
+        padding-top: 8px;
+    }
+    .coverage a {
+        float: right;
+        color: #666;
+        text-decoration: none;
+    }
+    .footer-bottom {
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px 0 30px;
+        border-top: 1px solid #E5E5E5;
+        clear: both;
+        /* background-color: pink; */
+    }
+    .footer-bottom-link a {
+        margin: 0 10px;
+    }
+    .footer-bottom-copyright {
+        padding: 10px 0;
+    }
+    .footer-bottom-img {
+        padding-left: 40px;
+    }
+    /* <!--footer部分end --> */
